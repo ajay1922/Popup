@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopupWindow</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        button {
+        cursor: pointer;
+        }
+        #popupcontainer {
+            width: 500px;
+            height: 350px;
+            background-color: lightseagreen;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            visibility: hidden;
+        }
+        #popupcontainer span {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="popupcontainer">
+        <span id="close">Close</span>
+        <h1>Welcome to Popup Window</h1>
+        <p>Welcome to info</p>
+        <button>more...</button>
+    </div>
+    <button id="popup">PupoupWindow</button>
+
+    <script>
+        var pp=document.getElementById('popup');
+        var pc=document.getElementById('popupcontainer');
+        var cp=document.getElementById('close');
+
+        pp.onclick=function(){
+            pc.style.visibility='visible';
+        }
+        cp.onclick=function(){
+            pc.style.visibility='hidden';
+        }
+    </script>
+</body>
+</html>
